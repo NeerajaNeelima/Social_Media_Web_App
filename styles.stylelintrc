@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    // Additional rules can be added here
+    "color-no-invalid-hex": true,
+    "selector-type-no-unknown": [true, { "ignoreTypes": ["custom-element"] }],
+    "declaration-colon-newline-after": null
+  }
+}

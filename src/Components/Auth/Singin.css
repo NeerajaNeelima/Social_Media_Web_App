@@ -1,0 +1,40 @@
+body{
+    
+
+}
+.form1{
+    position: absolute;
+    top: 25%;
+    width: 800px;
+    font-size: 16px;
+    
+}
+.flex_box{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.left{
+    position: absolute;
+    left: 40%;
+}
+.right{
+    position: absolute;
+    right: -50%;
+}
+.login_card{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    height: 300px;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+@media screen and (max-width: 800px) {
+    .login_card{
+        
+        left: 10%;
+        
+    }
+}

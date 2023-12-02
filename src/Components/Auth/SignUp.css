@@ -1,0 +1,120 @@
+/* SignUp.css */
+.box1{
+  position: absolute;
+  height: 300px;
+  width:300px;
+  left:15%;
+  z-index: -10;
+  background-color:aqua;
+  border: 1px solid aqua;
+  translate: z;
+  border-radius: 50%;
+}
+.box2{
+  position: absolute;
+  height: 200px;
+  width:200px;
+  top:55%;
+  left:20%;
+  z-index: -10;
+  background-color:aqua;
+  border: 1px solid aqua;
+  translate: z;
+  border-radius: 50%;
+}
+.box4{
+  position: absolute;
+  height: 200px;
+  width:200px;
+  top:16%;
+  left:73%;
+  z-index: -10;
+  background-color:aqua;
+  border: 1px solid aqua;
+  translate: z;
+  border-radius: 50%;
+}
+.box3{
+  position: absolute;
+  height: 100px;
+  width:100px;
+  top:70%;
+  left:65%;
+  z-index: -10;
+  background-color:aqua;
+  border: 1px solid aqua;
+  translate: z;
+  border-radius: 50%;
+}
+  
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 5%;
+  z-index: 10;
+  
+  }
+  
+  /* Center the form on the page */
+  @media screen and (max-width: 600px) {
+    .form {
+      text-align: center;
+    }
+  }
+  .signup_card{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    height: 450px;
+    width: 700px;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+@media screen and (max-width: 800px) {
+    .signup_card{
+        
+        left: 0;
+        
+    }
+}
+  
+  /* Adjust form layout for smaller screens */
+  @media screen and (max-width: 600px) {
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+  
+    .ant-form-item-control-input {
+      width: 100%;
+    }
+  
+    .ant-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .ant-form-item-label {
+      text-align: left !important;
+    }
+  
+    .ant-form-item-control-input-content {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    /* Adjust the position of the Or and Login In text */
+    .ant-form-item-control-input-content > div {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .ant-form-item-control-input-content > div > span {
+      display: block;
+      margin-top: 8px;
+    }
+  }
+  

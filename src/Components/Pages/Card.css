@@ -1,0 +1,25 @@
+.card-flex{
+    display: flex;
+    padding: 10px;
+    gap:50px;
+    flex-wrap: wrap;
+}
+.cards {
+    display: inline-block;
+    transition: transform .2s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.19rem;
+    cursor:pointer;
+    width: 360px;
+    height:400px;
+    z-index:0;
+    border: 1px solid rgb(99, 99, 99);
+}
+@media screen and(max-width: 600px) {
+    .Delete{
+        left:-10vh;
+    }
+
+}
