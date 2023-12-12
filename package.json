@@ -10,10 +10,12 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint --fix .",
     "lint:css": "stylelint 'src/**/*.css'",
-  "lint:css:fix": "stylelint --fix 'src/**/*.css'",
+    "lint:css:fix": "stylelint --fix 'src/**/*.css'",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/cli": "^5.5.1",
+    "@capacitor/core": "^5.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "react": "^18.2.0",
