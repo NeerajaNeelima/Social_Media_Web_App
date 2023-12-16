@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 
-const UserProfile = () => {
+const UserProfile: React.FC = () =>  {
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <div className="container rounded bg-white mt-5">
       <div className="row">
         <div className="col-md-4 border-right">
@@ -101,3 +102,4 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+

@@ -8,8 +8,8 @@ import {
   BookOutlined,
   
 } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Layout, Menu as AntMenu, theme, Button,Modal ,Upload,Form,Input,Checkbox} from 'antd';
+
+import { Layout, Menu as AntMenu, theme, Button,Modal ,Upload,Form,Input, message} from 'antd';
 import type { UploadProps } from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined,UploadOutlined } from '@ant-design/icons';
 import Card from './Card'
@@ -21,39 +21,12 @@ import MyProfile from './MyProfile'
 const { Header, Content,Sider } = Layout;
 
 
-const items: MenuProps['items'] = [
-  {
-    key: '1',
-    icon: <HomeOutlined />,
-    label: 'Home',
-  },
-  {
-    key: '2',
-    icon: <HeartOutlined />,
-    label: 'My Likes',
-  },
-  {
-    key: '3',
-    icon: <FileTextOutlined />,
-    label: 'My Posts',
-  },
-  {
-    key: '4',
-    icon: <UserOutlined />,
-    label: 'My Profile',
-  },
-  {
-    key: '5',
-    icon: <BookOutlined />,
-    label: 'My Bookmarks',
-  },
-];
 
 const Home: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  
 const [activeMenuItem, setActiveMenuItem] = useState('home'); // Default to 'home'
-const [posts, setPosts] = useState([]); // Assuming posts are stored in state
+
 const [open, setOpen] = useState(false);
 
 
@@ -65,27 +38,11 @@ const [open, setOpen] = useState(false);
     setCollapsed(!collapsed);
   };
 
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
+  
 
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
+  
 
-  const handleCreatePost = (values: any) => {
-    // Logic to create a new post
-    setPosts((prevPosts) => [
-      ...prevPosts,
-      {
-        id: prevPosts.length + 1,
-        content: values.content,
-        // Other post details
-      },
-    ]);
-
-    setIsModalVisible(false);
-  };
+  
 
   const handleMenuClick = (key: string) => {
     setActiveMenuItem(key);
@@ -101,20 +58,20 @@ const [open, setOpen] = useState(false);
       if (info.file.status !== 'uploading') {
         console.log(info.file, info.fileList);
       }
-      if (info.file.status === 'done') {
+      if(info.file.status === 'done') {
         message.success(`${info.file.name} file uploaded successfully`);
       } else if (info.file.status === 'error') {
         message.error(`${info.file.name} file upload failed.`);
       }
     },
   };
-  const onFinish = (values: any) => {
+  const onFinish = (values: string) => {
     console.log('Success:', values);
   };
   
-  const onFinishFailed = (errorInfo: any) => {
+  /*const onfail = (errorInfo:string) => {
     console.log('Failed:', errorInfo);
-  };
+  };*/
   
   type FieldType = {
     title?: string;
@@ -228,7 +185,7 @@ const [open, setOpen] = useState(false);
     style={{ maxWidth: 600, paddingTop:10 }}
     initialValues={{ remember: true }}
     onFinish={onFinish}
-    onFinishFailed={onFinishFailed}
+    //onFinishFailed={onfail}
     autoComplete="off"
   >
     <Form.Item<FieldType>

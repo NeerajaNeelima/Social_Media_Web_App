@@ -99,11 +99,11 @@ const PostCard: React.FC = () => {
     setIsEditModalVisible(false);
   };
 
-  const calculateTotalLikes = (postId) => {
+  const calculateTotalLikes = (postId: number) => {
     const likesForPost = likesData.filter((like) => like.postId === postId);
     return likesForPost.length;
   };
-  const calculateTotalSaved = (postId) => {
+  const calculateTotalSaved = (postId:number) => {
     const likesForPost = SavedData.filter((like) => like.postId === postId);
     return likesForPost.length;
   };
@@ -137,7 +137,7 @@ const PostCard: React.FC = () => {
       {(isloading ? [...Array(pageSize)] : visiblePosts).map((post, index) => (
           <div key={post ? post.id : index} style={{ width: '360px', marginBottom: '16px' }}>
             {(isloading || !post) ? (
-              <SkeletonTheme color="#202020" highlightColor="#444">
+              <SkeletonTheme highlightColor="#444">
                 <Skeleton height={300} duration={2} />
               </SkeletonTheme>
             ) :(

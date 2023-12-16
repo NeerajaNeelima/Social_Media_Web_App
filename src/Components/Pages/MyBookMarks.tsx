@@ -73,11 +73,11 @@ const MyBookMarks: React.FC = () => {
     setIsEditModalVisible(false);
   };
 
-  const calculateTotalLikes = (postId) => {
+  const calculateTotalLikes = (postId:number) => {
     const likesForPost = likesData.filter((like) => like.postId === postId);
     return likesForPost.length;
   };
-  const calculateTotalSaved = (postId) => {
+  const calculateTotalSaved = (postId:number) => {
     const likesForPost = SavedData.filter((like) => like.postId === postId);
     return likesForPost.length;
   };

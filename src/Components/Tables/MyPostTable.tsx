@@ -5,7 +5,7 @@ interface SignUpRequest {
   
   interface SignUpResponse {
     success: boolean;
-    data?: any; // Additional user data, if needed
+    data?: string; // Additional user data, if needed
     error?: string;
   }
   interface LoginRequest {

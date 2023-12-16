@@ -4,7 +4,7 @@ const API_BASE_URL = 'https://example.com/api'; // Replace with your actual API 
 
 interface ApiResponse {
   success: boolean;
-  data?: any;
+  data?: string;
   error?: string;
 }
 
@@ -83,7 +83,7 @@ export async function fetchSavedPosts(): Promise<ApiResponse> {
   }
 }
 
-export async function updateProfile(profileData: any): Promise<ApiResponse> {
+export async function updateProfile(profileData: string): Promise<ApiResponse> {
   try {
     const response = await fetch(`${API_BASE_URL}/profile/update`, {
       method: 'PUT',
